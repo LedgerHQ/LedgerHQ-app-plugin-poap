@@ -22,7 +22,6 @@ static bool set_beneficiary_ui(ethQueryContractUI_t *msg, context_t *context) {
 
     return getEthAddressStringFromBinary(context->beneficiary,
                                          msg->msg + 2,
-                                         msg->pluginSharedRW->sha3,
                                          0);
 }
 
