@@ -20,10 +20,7 @@ static bool set_beneficiary_ui(ethQueryContractUI_t *msg, context_t *context) {
     msg->msg[0] = '0';
     msg->msg[1] = 'x';
 
-    return getEthAddressStringFromBinary(context->beneficiary,
-                                         msg->msg + 2,
-                                         msg->pluginSharedRW->sha3,
-                                         0);
+    return getEthAddressStringFromBinary(context->beneficiary, msg->msg + 2, 0);
 }
 
 // Helper function that returns the enum corresponding to the screen that should be displayed.
